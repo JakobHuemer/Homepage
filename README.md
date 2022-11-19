@@ -1,1 +1,1 @@
-# Homepage for Medientechnik
+# Semesterprojekt Medientechnik
