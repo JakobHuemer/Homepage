@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poor+Story&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --default-one: ;
+}
+
+.profile img {
+  position: sticky;
+  width: 20rem;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.profile p {
+  min-width: 10px;
+  margin: 20px;
+  max-width: 100%;
+  width: 30rem;
+  font-family: "Jetbrains Mono";
+  background-color: rgba(192, 192, 192, 0.13);
+  padding: 20px;
+  border-radius: 1rem;
+
+}
+
+.profile {
+  padding: 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#background {
+  background-image: url("/img/anoserone.png");
+  background-position: top center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+  /* transform: translate3d(0, 34px, 34px); */
+  
+}
+
+/* @media only screen and (max-width: 844px){
+  .profile {
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile p {
+    margin-top: 2rem;
+  }
+} */
+
