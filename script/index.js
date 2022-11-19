@@ -1,12 +1,6 @@
 window.addEventListener("DOMContentLoaded", scrollLoop, false);
 
-
-
 const bgImage = document.querySelector("#background");
-
-
-console.log( "LOG 1: " + bgImage);
-console.log( "LOG 2: " + bgImage.style)
 
 var xScrollPos;
 var yScrollPos;

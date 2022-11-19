@@ -113,11 +113,13 @@ footer {
     height: calc(100vh - 70px - 4rem);
 }
 
+.second-nav {
+  display: none;
+}
 
+/* Media max 810 Pixel */
 
-/* Media max 700 Pixel */
-
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 810px) {
   /*Menu Button closed*/
    .menu-btn {
     background-color: var(--primary);
@@ -204,7 +206,9 @@ footer {
     position: fixed;
   }
 
-
+  .second-nav {
+    display: block;
+  }
   /*Nav bg circle open*/
   .second-nav.nav-open .nav-circle-bg {
     transition-delay: 0s;
@@ -258,7 +262,7 @@ footer {
 
   /*Menu open*/
   .second-nav.nav-open .navlist {
-    right: 10px;
+    right: 0px;
     background-color: rgba(255, 166, 0, 0.0);
     height: 500px;
     width: 200px;
