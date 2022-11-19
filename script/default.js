@@ -1,5 +1,6 @@
+const navBar = document.querySelector(".second-nav");
 const menuBtn = document.querySelector(".menu-btn");
-const navBar = document.querySelector(".nav-content");
+console.log(menuBtn)
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
