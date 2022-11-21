@@ -1,28 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poor+Story&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-* {
+:root {
+  --bg-primary: rgb(15, 15, 15);
+  --bg-secondary: rgb(2, 2, 2);
+  --bg-3: ;
+  --bg-primary-op: 15, 15, 15;
+  --bg-secondary-op: 2, 2, 2;
+  --font-clr-primary: rgb(255, 255, 255);
+  --font-clr-secondary: rgb(253, 253, 253);
+  --neutral-primary: rgb(255, 255, 255);
+  --neutral-secondary: rgba(192, 192, 192, .1);
   font-family: Inter, sans-serif;
+  color: var(--font-clr-primary);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --primary: rgb(15, 15, 15);
-  --secondary: rgb(8, 8, 8);
-  --accent-one: rgb(255, 255, 255);
+}
+
+*{
+  transition: color .2s, background-color .2s;
 }
 
 ::selection {
-  color: var(--primary);
-  background: var(--accent-one);
+  color: var(--bg-primary);
+  background: var(--font-clr-primary);
 }
 
 /* Navbar of all sites */
 body {
-  background-color: var(--primary);
+  background-color: var(--bg-primary);
 }
 nav {
-  opacity: .7;
-  background-color: var(--secondary);
+  opacity: .8;
+  background-color: var(--bg-primary);
+}
+
+.nav-content-left {
+  /* background-color: orange; */
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* gap: 10px; */
 }
 
 .nav-content {
@@ -39,7 +59,7 @@ nav {
   font-family: "Poor Story", cursive;
   font-size: 40px;
   margin: 0.5rem 0 0 10px;
-  color: white;
+  color: var(--font-clr-primary);
 }
 
 .nav-content .navlist {
@@ -56,7 +76,7 @@ nav {
   margin: 5px;
   /* transition: all 0.3s; */
   font-family: "Jetbrains Mono";
-  color: white;
+  color: var(--font-clr-primary);
   text-decoration: none;
 }
 
@@ -68,7 +88,7 @@ nav {
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background-color: var(--accent-one);
+  background-color: var(--font-clr-primary);
 }
 
 .navlink:hover::before {
@@ -79,7 +99,7 @@ nav {
   bottom: -3px;
   width: 100%;
   height: 2px;
-  background-color: var(--accent-one);
+  background-color: var(--font-clr-primary);
 }
 
 main {
@@ -88,20 +108,20 @@ main {
   border-radius: 2rem 2rem 0 0;
   height: calc(100vh - 160px - 70px);
   backdrop-filter: blur(7px);
-  background-color: rgba(15, 15, 15, 0.76);
+  background-color: rgba(var(--bg-primary-op), 0.76);
   max-width: 95%;
   width: 1500px;
   margin: 5rem auto 0 auto;
   padding: 5px;
-  color: rgb(192, 192, 192);
+  color: var(--font-clr-primary);
 }
 
 footer {
   width: 100%;
   height: 250px;
-  background-color: rgb(15, 15, 15);
+  background-color: var(--bg-primary);
   font-size: 40px;
-  color: white;
+  color: var(--font-clr-primary);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -117,12 +137,92 @@ footer {
   display: none;
 }
 
+
+
+
+/* Mode switcher */
+
+.mode-switcher {
+  transition: all .2s;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  background-color: var(--bg-secondary);
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 40%;
+  border: 2px solid var(--neutral-primary);
+}
+
+.mode-indicator {
+  display: block;
+  margin: auto;
+}
+
+/*Moon on*/
+
+.mode-indicator.indicator-dark.on {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*Sun on*/
+
+.mode-indicator.indicator-light.on {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*Sun and moon off*/
+
+.mode-indicator.indicator-light.off {
+  display: none;
+}
+.mode-indicator.indicator-dark.off {
+  display: none;
+}
+
+
+
 /* Media max 810 Pixel */
 
 @media only screen and (max-width: 810px) {
+
+  .nav-content-left {
+    /* background-color: orange; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* gap: 10px; */
+  }
+
+
+  /*mode switcher on Smartphone*/
+  .mode-switcher {
+    transition: all .2s;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-secondary);
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 40%;
+    border: 2px solid var(--neutral-primary);
+  }
+
+
+
+
   /*Menu Button closed*/
    .menu-btn {
-    background-color: var(--primary);
+    background-color: var(--bg-primary);
     border-radius: 50%;
     z-index: 101;
     position: fixed;
@@ -137,15 +237,14 @@ footer {
    }
 
    .menu-btn .menu-btn__burger {
-    transition: all .3s ease;
     visibility: visible;
-    transition: all .3s;
+    transition: all .3s ease;
     display: block;
     margin: 0 auto;
     width: 30px;
     height: 4px;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--neutral-primary);
    }
 
   .menu-btn .menu-btn__burger::before {
@@ -156,7 +255,7 @@ footer {
     width: 30px;
     height: 4px;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--neutral-primary);
     }
 
   .menu-btn .menu-btn__burger::after {
@@ -167,29 +266,25 @@ footer {
     width: 30px;
     height: 4px;
     border-radius: 8px;
-    background-color: white;
+    background-color: var(--neutral-primary);
   }
 
   /*Menu button open*/
 
   .menu-btn.btn-open .menu-btn__burger::before {
     visibility: visible;
-    transform: translate(-100px,0)rotate(45deg);
-    /* background-color: var(--primary); */
+    transform: translate(-100px,0)rotate(-135deg);
   }
 
   .menu-btn.btn-open .menu-btn__burger::after {
     visibility: visible;
-    transform: translate(-100px,-4px)rotate(-45deg);
-    /* background-color: var(--primary); */
+    transform: translate(-100px,-4px)rotate(135deg);
   }
 
   .menu-btn.btn-open .menu-btn__burger {
     transform: translateX(100px);
     visibility: hidden;
   }
-
-
 
 
   /*Nav big circle closed*/
@@ -202,7 +297,7 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--primary);
+    background-color: var(--bg-primary);
     position: fixed;
   }
 
@@ -216,7 +311,7 @@ footer {
     top: -100px;
     width: 600px;
     height: 600px;
-    background-color: var(--primary);
+    background-color: var(--bg-primary);
   }
 
 
@@ -243,7 +338,7 @@ footer {
     top: 70px;
     display: flex;
     text-align: end;
-    background-color: rgba(255, 166, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0);
     height: 500px;
     width: 200px;
     gap: 50px;
@@ -263,7 +358,7 @@ footer {
   /*Menu open*/
   .second-nav.nav-open .navlist {
     right: 0px;
-    background-color: rgba(255, 166, 0, 0.0);
+    background-color: rgba(0, 0, 0, 0);
     height: 500px;
     width: 200px;
     gap: 50px;

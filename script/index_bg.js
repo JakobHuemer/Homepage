@@ -5,8 +5,6 @@ const bgImage = document.querySelector("#background");
 var xScrollPos;
 var yScrollPos;
 
-
-
 function scrollLoop(e){
     xScrollPos = window.scrollX;
     yScrollPos = window.scrollY;
