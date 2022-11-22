@@ -1,16 +1,41 @@
 const button = document.querySelector(".mode-switcher");
 const root = document.querySelector(":root");
-var is_dark_on = true
+var mode;
+console.log(!document.cookie.split(";")[0].split("=")[1]);
+console.log(!document.cookie.split(";")[0].split("=")[1] == "false")
+console.log(document.cookie)
+
+
+if(!document.cookie.split("; ").find((row) => row.startsWith("onlyOnce"))){
+    document.cookie = "onlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=none; Secure";
+    document.cookie = "mode=dark";
+    mode = document.cookie.split("; ").find((row) => row.startsWith("mode=")).split("=")[1];
+} else {
+    console.log(document.cookie.split("; "))
+    mode = document.cookie.split("; ").find((row) => row.startsWith("mode=")).split("=")[1];
+}
+
+
 const dark_btn = document.querySelector('.mode-switcher .indicator-dark');
 const light_btn = document.querySelector('.mode-switcher .indicator-light');
 
+if(mode === "light"){
+    light_on();
+} else {
+    dark_on();
+}
+
 button.addEventListener("click" ,async () => {
-    if (is_dark_on) {
+    if (mode === "dark") {
         light_on();
-        is_dark_on = false;
+        mode = "light";
+        document.cookie = "mode=light";
+        console.log("CHANGING MODE: " + document.cookie.split("; ").find((row) => row.startsWith("mode=")).split("=")[1]);
     } else {
         dark_on();
-        is_dark_on = true;
+        mode = "dark";
+        document.cookie = "mode=dark";
+        console.log("CHANGING MODE: " + document.cookie.split("; ").find((row) => row.startsWith("mode=")).split("=")[1]);
     }
 });
 
