@@ -109,7 +109,9 @@ main {
   position: relative;
   z-index: 1;
   border-radius: 2rem 2rem 0 0;
-  height: calc(100vh - 160px - 70px);
+  /* height: calc(100vh - 160px - 70px); */
+  display: block;
+  height: 100vh;
   backdrop-filter: blur(7px);
   background-color: rgba(var(--bg-primary-op), 0.76);
   max-width: 95%;

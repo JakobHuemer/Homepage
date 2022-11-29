@@ -7,8 +7,8 @@ console.log(document.cookie)
 
 
 if(!document.cookie.split("; ").find((row) => row.startsWith("onlyOnce"))){
-    document.cookie = "onlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=none; Secure";
-    document.cookie = "mode=dark";
+    document.cookie = "onlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; SameSite=none; Secure, path=/";
+    document.cookie = "mode=dark; expires=FRI 31 DEC 9999 23:59:59 GMT; path=";
     mode = document.cookie.split("; ").find((row) => row.startsWith("mode=")).split("=")[1];
 } else {
     console.log(document.cookie.split("; "))
