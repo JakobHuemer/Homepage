@@ -5,7 +5,9 @@ body {
 form {
     max-width: 95%;
     margin: 2% auto ;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     grid-column-end: auto;
     border-radius: 10px;
     /*  */
@@ -15,6 +17,7 @@ form {
 form input,
 form textarea {
     opacity: 70%;
+    min-width: 0;
 }
 
 textarea {
@@ -32,7 +35,7 @@ form > *:not([class="head-of-form"]) {
     transition: opacity .3s, color .3s;
     color: var(--font-clr-primary);
     padding: 10px;
-    margin: 1%;
+    margin: 3px;
     background-color: rgba(var(--bg-primary-op), .8);
     border: none;
     border-radius: 7px;
