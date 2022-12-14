@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/default.css" />
-    <link rel="stylesheet" href="../style/experience.css" />
-    <title>Experience</title>
+    <link rel="stylesheet" href="../style/contact.css" />
+    <title>Contact</title>
   </head>
   <body>
     <nav>
@@ -52,6 +52,27 @@
       </ul>
       <div class="nav-circle-bg"></div>
     </div>
-    <main></main>
+    <main>
+      <div class="container">
+        <form action="">
+          <div class="head-of-form">
+            <h3>Get in Touch</h3>
+            <button id="submit" type="submit">Send</button>
+          </div>
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="Your E-Mail"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Message"
+            required></textarea>
+        </form>
+      </div>
+    </main>
   </body>
 </html>

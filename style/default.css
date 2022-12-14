@@ -11,6 +11,8 @@
   --font-clr-secondary: rgb(253, 253, 253);
   --neutral-primary: rgb(255, 255, 255);
   --neutral-secondary: rgba(192, 192, 192, .1);
+  --accent-one: rgb(19, 147, 233);
+  --accent-one-op: 19, 147, 233;
   font-family: Inter, sans-serif;
   color: var(--font-clr-primary);
   margin: 0;
@@ -148,6 +150,7 @@ footer {
 /* Mode switcher */
 
 .mode-switcher {
+  cursor: pointer;
   transition: all .2s;
   display: flex;
   width: 36px;
@@ -227,6 +230,7 @@ footer {
 
   /*Menu Button closed*/
    .menu-btn {
+    cursor: pointer;
     background-color: var(--bg-primary);
     border-radius: 50%;
     z-index: 101;
