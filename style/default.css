@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poor+Story&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
   --bg-primary: rgb(15, 15, 15);
@@ -10,7 +10,7 @@
   --font-clr-primary: rgb(255, 255, 255);
   --font-clr-secondary: rgb(253, 253, 253);
   --neutral-primary: rgb(255, 255, 255);
-  --neutral-secondary: rgba(192, 192, 192, .1);
+  --neutral-secondary: rgba(192, 192, 192, 0.1);
   --accent-one: rgb(19, 147, 233);
   --accent-one-op: 19, 147, 233;
   font-family: Inter, sans-serif;
@@ -20,8 +20,8 @@
   box-sizing: border-box;
 }
 
-*{
-  transition: color .2s, background-color .2s;
+* {
+  transition: color 0.2s, background-color 0.2s;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -39,7 +39,7 @@ body {
 nav {
   position: sticky;
   top: 0;
-  z-index: 99999;
+  z-index: 100;
   opacity: 1;
   background-color: var(--bg-primary);
 }
@@ -64,7 +64,7 @@ nav {
 }
 
 .nav-content h1 {
-  font-family: "Poor Story", cursive;
+  font-family: 'Poor Story', cursive;
   font-size: 40px;
   margin: 0.5rem 0 0 10px;
   color: var(--font-clr-primary);
@@ -83,13 +83,13 @@ nav {
   position: relative;
   margin: 5px;
   /* transition: all 0.3s; */
-  font-family: "Jetbrains Mono";
+  font-family: 'Jetbrains Mono';
   color: var(--font-clr-primary);
   text-decoration: none;
 }
 
 .navlink::before {
-  content: "";
+  content: '';
   opacity: 0;
   transition: all 0.3s;
   position: absolute;
@@ -100,7 +100,7 @@ nav {
 }
 
 .navlink:hover::before {
-  content: "";
+  content: '';
   opacity: 100;
   position: absolute;
   left: 0;
@@ -118,13 +118,13 @@ main {
   z-index: 1;
   border-radius: 2rem 2rem 0 0;
   /* height: calc(100vh - 160px - 70px); */
-  min-height: 100vh;
+  min-height: calc(100vh - 70px - 2rem);
   display: block;
   backdrop-filter: blur(7px);
   background-color: rgba(var(--bg-primary-op), 0.76);
   max-width: 95%;
   width: 1500px;
-  margin: 5rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   padding: 5px;
   color: var(--font-clr-primary);
 }
@@ -143,21 +143,18 @@ main {
 } */
 
 .sect1 {
-    height: calc(100vh - 70px - 4rem);
+  height: calc(100vh - 70px - 4rem);
 }
 
 .second-nav {
   display: none;
 }
 
-
-
-
 /* Mode switcher */
 
 .mode-switcher {
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
   display: flex;
   width: 36px;
   height: 36px;
@@ -202,12 +199,9 @@ main {
   display: none;
 }
 
-
-
 /* Media max 810 Pixel */
 
 @media only screen and (max-width: 810px) {
-
   .nav-content-left {
     /* background-color: orange; */
     width: 100%;
@@ -217,10 +211,9 @@ main {
     /* gap: 10px; */
   }
 
-
   /*mode switcher on Smartphone*/
   .mode-switcher {
-    transition: all .2s;
+    transition: all 0.2s;
     display: block;
     width: 40px;
     height: 40px;
@@ -231,15 +224,12 @@ main {
     border: 2px solid var(--neutral-primary);
   }
 
-
-
-
   /*Menu Button closed*/
-   .menu-btn {
+  .menu-btn {
     cursor: pointer;
     background-color: var(--bg-primary);
     border-radius: 50%;
-    z-index: 101;
+    z-index: 9999;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -248,36 +238,36 @@ main {
     display: flex;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-   }
+    justify-content: center;
+  }
 
-   .menu-btn .menu-btn__burger {
+  .menu-btn .menu-btn__burger {
     visibility: visible;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     display: block;
     margin: 0 auto;
     width: 30px;
     height: 4px;
     border-radius: 8px;
     background-color: var(--neutral-primary);
-   }
+  }
 
   .menu-btn .menu-btn__burger::before {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     display: block;
     transform: translateY(-10px);
-    content: "";
+    content: '';
     width: 30px;
     height: 4px;
     border-radius: 8px;
     background-color: var(--neutral-primary);
-    }
+  }
 
   .menu-btn .menu-btn__burger::after {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     transform: translateY(calc(-4px + 10px));
     display: block;
-    content: "";
+    content: '';
     width: 30px;
     height: 4px;
     border-radius: 8px;
@@ -288,19 +278,18 @@ main {
 
   .menu-btn.btn-open .menu-btn__burger::before {
     visibility: visible;
-    transform: translate(-100px,0)rotate(-135deg);
+    transform: translate(-100px, 0) rotate(-135deg);
   }
 
   .menu-btn.btn-open .menu-btn__burger::after {
     visibility: visible;
-    transform: translate(-100px,-4px)rotate(135deg);
+    transform: translate(-100px, -4px) rotate(135deg);
   }
 
   .menu-btn.btn-open .menu-btn__burger {
     transform: translateX(100px);
     visibility: hidden;
   }
-
 
   /*Nav big circle closed*/
   .second-nav .nav-circle-bg {
@@ -329,8 +318,7 @@ main {
     background-color: var(--bg-primary);
   }
 
-
-   /*Let main navbar disappear*/
+  /*Let main navbar disappear*/
   .nav-content .navlist {
     transition: all;
     z-index: 100;
@@ -348,7 +336,7 @@ main {
     overflow: hidden;
     z-index: 1000;
     position: fixed;
-    transition: all .5s;
+    transition: all 0.5s;
     right: -200px;
     top: 70px;
     display: flex;
@@ -358,9 +346,8 @@ main {
     width: 200px;
     gap: 50px;
     flex-direction: column;
-  
   }
-  
+
   .second-nav .navlist {
     list-style-type: none;
   }
@@ -368,7 +355,6 @@ main {
     margin: 50px;
     /* display: inline; */
   }
-
 
   /*Menu open*/
   .second-nav.nav-open .navlist {
@@ -378,7 +364,6 @@ main {
     width: 200px;
     gap: 50px;
     flex-direction: column;
-    
   }
 
   .second-nav.nav-open .navlink {
@@ -389,5 +374,4 @@ main {
   .second-nav.nav-open .navlist {
     list-style-type: none;
   }
-
 }
