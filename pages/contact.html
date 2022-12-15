@@ -53,8 +53,10 @@
       <div class="nav-circle-bg"></div>
     </div>
     <main>
+      <div class="container"></div>
+
       <div class="container">
-        <form action="">
+        <form>
           <div class="head-of-form">
             <h3>Get in Touch</h3>
             <button id="submit" type="submit">Send</button>
@@ -73,6 +75,20 @@
             required></textarea>
         </form>
       </div>
+      <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail() {
+          Email.send({
+            Host: 'smtp.elasticemail.com',
+            Username: 'jakobhuemer2.0@gmail.com',
+            Password: 'jakobfistel2905',
+            To: 'jakobhuemer2.0@gmail.com',
+            From: document.getElementById('email').value,
+            Subject: '---Portfolio---',
+            Body: document.getElementById('message').value,
+          }).then((message) => alert(message));
+        }
+      </script> -->
     </main>
   </body>
 </html>
