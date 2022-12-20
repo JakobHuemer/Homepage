@@ -116,16 +116,15 @@ main {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: relative;
   z-index: 1;
-  border-radius: 2rem 2rem 0 0;
   /* height: calc(100vh - 160px - 70px); */
-  min-height: calc(100vh - 70px - 2rem);
+  min-height: calc(100vh - 70px);
   display: block;
-  backdrop-filter: blur(7px);
-  background-color: rgba(var(--bg-primary-op), 0.76);
-  max-width: 95%;
+  /* backdrop-filter: blur(7px); */
+  /* background-color: rgba(var(--bg-primary-op), 0.76); */
+  max-width: 100%;
   width: 1500px;
-  margin: 2rem auto 0 auto;
-  padding: 5px;
+  margin: 0 auto;
+  /* padding: 5px; */
   color: var(--font-clr-primary);
 }
 
