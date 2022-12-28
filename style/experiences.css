@@ -29,14 +29,14 @@ section {
   margin-top: 10px;
 }
 
-.language::before {
+/* .language::before {
   content: '';
   bottom: -3px;
   width: 100%;
   position: absolute;
   height: 6px;
   background-color: white;
-}
+} */
 
 .img {
   margin: 10px;
