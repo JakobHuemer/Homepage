@@ -62,78 +62,24 @@
     </div>
     <main>
       <section class="baumbot">
-        <div class="profile-sect">
+        <script>
+          var card = document.querySelector('.baumbot');
+          card.addEventListener('click', function () {
+            window.location.href = './baumbot/baumbot.html';
+          });
+        </script>
+        <div class="text">
           <h1>Baum Bot</h1>
-          <img src="../img/baumbot_pp.png" alt="BaumBot profile Picture" />
           <p class="description">
-            The Discord bot <b>Baum Bot</b> is a bot developed by Jakob
-            Huemer-Fistelberger to enhance the daily experience on the Discord
-            server Baumserver. The bot has a variety of features, including the
-            ability to clear messages, send images of a power adapter and a
-            glass of orange juice, and create custom voice channels. It also has
-            an AFK system and the ability to create polls. The bot is still in
-            development, but has already proven to be a valuable tool for the
-            Discord community of Baumserver.
+            Baum Bot is a Discord bot created by Jakob Huemer-Fistelberger for
+            the Baumserver Discord server. The bot can clear messages, send
+            images, create custom voice channels, and more. It has an AFK system
+            and can create polls. It is still being developed, but has already
+            been useful for the Baumserver community.
           </p>
         </div>
-
-        <div class="command cclear">
-          <h3 class="commandcommand">clear</h3>
-          <p class="commanddescript">
-            The <b>/clear</b> command allows members to quickly delete a
-            specific number of messages in a channel.
-          </p>
-        </div>
-
-        <div class="command cnetzteil-orangensaft">
-          <h3 class="commandcommand">netzteil</h3>
-          <h3 class="commandcommand">orangensaft</h3>
-          <p class="commanddescript">
-            The <b>/netzteil</b> and <b>/orangensaft</b> commands send members
-            fun images of a power adapter and a glass of orange juice.
-          </p>
-        </div>
-
-        <div class="command cvoice">
-          <h3 class="commandcommand">voice</h3>
-          <p class="commanddescript">
-            The <b>/voice</b> command has a variety of subcommands for editing
-            custom voice channels, or creating new ones using the "Join to
-            Create" feature.
-          </p>
-        </div>
-
-        <div class="command cafk">
-          <h3 class="commandcommand">afk</h3>
-          <p class="commanddescript">
-            The <b>/afk</b> command allows members to edit the name of their AFK
-            tag, which indicates when a member is away from their keyboard in a
-            voice channel.
-          </p>
-        </div>
-
-        <div class="command cpoll">
-          <h3 class="commandcommand">poll</h3>
-          <p class="commanddescript">
-            The <b>/poll</b> command enables members to create polls with custom
-            descriptions, up to 26 choices, and tags for specific groups to
-            vote.
-          </p>
-        </div>
-
-        <div class="command cping">
-          <h3 class="commandcommand">ping</h3>
-          <p class="commanddescript">
-            The <b>/ping</b> command tells members the current ping of the bot.
-          </p>
-        </div>
-
-        <div class="command cweather">
-          <h3 class="commandcommand">weather</h3>
-          <p class="commanddescript">
-            The <b>/weather</b> command provides members with the current
-            weather for a given location.
-          </p>
+        <div class="img">
+          <img src="../img/baumbot_pp.png" alt="BaumBot profile Picture" />
         </div>
       </section>
     </main>

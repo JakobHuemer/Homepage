@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Hexaframe CF';
+    src: local('Hexaframe CF Extra Bold Oblique'), local('Hexaframe-CF-Extra-Bold-Oblique'),
+        url('HexaframeCF-ExtraBoldOblique.woff2') format('woff2'),
+        url('HexaframeCF-ExtraBoldOblique.woff') format('woff'),
+        url('HexaframeCF-ExtraBoldOblique.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }

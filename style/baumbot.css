@@ -1,0 +1,43 @@
+#background {
+  background: var(--bg-tertiary);
+  background-position: top center;
+  position: fixed;
+  background-repeat: no-repeat;
+  z-index: -10;
+  width: 100%;
+  height: 120%;
+  background-size: cover;
+  /* transform: translate3d(0, 34px, 34px); */
+}
+
+main {
+  margin-top: 2rem;
+  -webkit-box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 1);
+  border-radius: 25px;
+  max-width: 95%;
+  width: 1000px;
+  background-color: rgba(var(--bg-primary-op), 0.6);
+  margin: 28px auto;
+  padding: 2%;
+  overflow: hidden;
+}
+
+.baumbot-pp-back {
+  transition: 0.2s;
+  display: block;
+  border-radius: 2rem;
+  margin: 2rem auto 2rem auto;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 75px -30px var(--accent-one);
+  -moz-box-shadow: 0px 0px 75px -30px var(--accent-one);
+  box-shadow: 0px 0px 75px -30px var(--accent-one);
+}
+
+.baumbot-pp-back:hover {
+  transform: scale(1.04);
+  -webkit-box-shadow: 0px 0px 106px -22px var(--accent-one);
+  -moz-box-shadow: 0px 0px 106px -22px var(--accent-one);
+  box-shadow: 0px 0px 106px -22px var(--accent-one);
+}

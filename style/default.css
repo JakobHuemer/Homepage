@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poor+Story&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+@font-face {
+  font-family: 'monocraft';
+  src: url('../fonts/monocraft/monocraft-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Hexaframe CF Extra Bold Oblique';
+  src: url('../fonts/hexaframe/HexaframeCF-ExtraBoldOblique/HexaframeCF-ExtraBoldOblique.woff')
+    format('woff');
+}
+
 :root {
   --bg-primary: rgb(15, 15, 15);
   --bg-secondary: rgb(2, 2, 2);
-  --bg-3: ;
+  --bg-tertiary: rgb(20, 20, 20);
   --bg-primary-op: 15, 15, 15;
   --bg-secondary-op: 2, 2, 2;
   --font-clr-primary: rgb(255, 255, 255);
@@ -13,7 +24,9 @@
   --neutral-secondary: rgba(192, 192, 192, 0.1);
   --accent-one: rgb(19, 147, 233);
   --accent-one-op: 19, 147, 233;
+  --accent-two: rgb(233, 155, 19);
   font-family: Inter, sans-serif;
+  font-size: 16px;
   color: var(--font-clr-primary);
   margin: 0;
   padding: 0;

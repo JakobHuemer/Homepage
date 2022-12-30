@@ -45,6 +45,10 @@
   /* transform: translate3d(0, 34px, 34px); */
 }
 
+b {
+  color: var(--accent-one);
+}
+
 /* @media only screen and (max-width: 844px){
   .profile {
     padding: 0rem;

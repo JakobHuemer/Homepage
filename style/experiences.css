@@ -1,51 +1,98 @@
 body {
-  background-color: #7fffd4;
+  background-color: var(--bg-tertiary);
+}
+
+html {
+  font-size: 16px;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 
 section {
+  -webkit-box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 1);
   border-radius: 25px;
   max-width: 95%;
   width: 1000px;
-  background-color: rgba(var(--bg-primary-op), 0.8);
-  margin: 1% auto;
+  background-color: rgba(var(--bg-primary-op), 0.6);
+  margin: 28px;
+  padding: 2%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
-
   flex-wrap: wrap;
   overflow: hidden;
 }
 
+.img {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.img img {
+  width: 350px;
+  border-radius: 1.3rem;
+  overflow: hidden;
+}
+.img > * {
+  padding: 2%;
+}
+
+@media only screen and (max-width: 834px) {
+  .img img {
+    width: 100%;
+    border-radius: 2rem;
+  }
+
+  .two-img img {
+    box-sizing: border-box;
+    width: 50%;
+  }
+
+  .two-img {
+    flex-direction: row;
+  }
+}
+
+.text {
+  flex: 1 1 50%;
+  background-color: rgba(var(--bg-primary-op), 0.4);
+  border-radius: 1.3rem;
+  padding: 2%;
+  margin: 2%;
+  width: 600px;
+  max-width: 100%;
+
+  -webkit-box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
+}
+
+.text h1 {
+  font-size: 2rem;
+  margin: 0 0 4% 0;
+  padding: 0;
+  font-family: 'Hexaframe CF Extra Bold Oblique';
+  color: var(--accent-one);
+}
+
+/* 
 .language {
   width: 100%;
   text-align: center;
   margin-top: 10px;
 }
 
-/* .language::before {
-  content: '';
-  bottom: -3px;
-  width: 100%;
-  position: absolute;
-  height: 6px;
-  background-color: white;
-} */
-
-.img {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
 .experience {
-  margin: 3%;
+  margin: 2%;
   flex-grow: 3;
   flex-basis: 60%;
   width: 500px;
@@ -64,10 +111,4 @@ section {
 
 .htmlcssjs p {
   width: 650px;
-}
-
-.img img {
-  margin: 8px;
-  width: 200px;
-  border-radius: 20px;
-}
+} */
