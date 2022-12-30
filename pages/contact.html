@@ -21,9 +21,9 @@
   </head>
   <body>
     <script src="../script/s_word.js"></script>
-    <!-- <div id="background">
+    <div id="background">
       <script src="../../script/index_bg.js"></script>
-    </div> -->
+    </div>
     <nav>
       <div class="nav-content">
         <div class="nav-content-left">
@@ -71,6 +71,7 @@
       </ul>
       <div class="nav-circle-bg"></div>
     </div>
+
     <main>
       <section class="contactinfo top-section">
         <h1>Contact</h1>
@@ -91,6 +92,15 @@
                 src="../img/contact/mail-filled-svgrepo-com.svg"
                 alt="Mail Icon" />
               j.huemer-fistelberger@students.htl-leonding.ac.at</a
+            >
+          </li>
+          <li>
+            <a href="mailto:jakobhuemer2.0@gmail.com"
+              ><img
+                height="16"
+                src="../img/contact/mail-filled-svgrepo-com.svg"
+                alt="Mail Icon" />
+              jakobhuemer2.0@gmail.com</a
             >
           </li>
         </ul>
@@ -143,6 +153,12 @@
               document.getElementById('email').value == '' ||
               document.getElementById('message').value == ''
             ) {
+              return;
+            }
+            pattern =
+              /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+
+            if (pattern.test(document.getElementById('email').value)) {
               return;
             }
 
