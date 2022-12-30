@@ -29,8 +29,8 @@ section {
   max-width: 95%;
   width: 1000px;
   background-color: rgba(var(--bg-primary-op), 0.6);
-  margin: 28px;
-  padding: 2%;
+  margin: 1.3rem;
+  padding: 1%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -60,17 +60,15 @@ section:hover {
 
 @media only screen and (max-width: 834px) {
   .img img {
+    /* background-color: red; */
     width: 100%;
     border-radius: 2rem;
   }
 
-  .two-img img {
+  .img {
     box-sizing: border-box;
-    width: 50%;
-  }
-
-  .two-img {
-    flex-direction: row;
+    width: 100%;
+    /* background-color: orange; */
   }
 }
 
@@ -78,7 +76,7 @@ section:hover {
   flex: 1 1 50%;
   background-color: rgba(var(--bg-primary-op), 0.4);
   border-radius: 1.3rem;
-  padding: 2%;
+  padding: 3%;
   margin: 2%;
   width: 600px;
   max-width: 100%;

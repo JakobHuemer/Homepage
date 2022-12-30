@@ -19,7 +19,9 @@
   --bg-primary-op: 15, 15, 15;
   --bg-secondary-op: 2, 2, 2;
   --font-clr-primary: rgb(255, 255, 255);
+  --font-clr-primary-op: 255, 255, 255;
   --font-clr-secondary: rgb(253, 253, 253);
+  --font-clr-secondary-op: 253, 253, 253;
   --neutral-primary: rgb(255, 255, 255);
   --neutral-secondary: rgba(192, 192, 192, 0.1);
   --accent-one: rgb(19, 147, 233);
@@ -40,6 +42,10 @@
   box-sizing: border-box;
 }
 
+b {
+  color: var(--accent-one);
+}
+
 ::selection {
   color: var(--bg-primary);
   background: var(--font-clr-primary);
@@ -50,7 +56,7 @@ body {
   background-color: var(--bg-primary);
 }
 nav {
-  /* position: sticky; */
+  position: relative;
   top: 0;
   z-index: 100;
   opacity: 1;
@@ -130,7 +136,7 @@ main {
   position: relative;
   z-index: 1;
   /* height: calc(100vh - 160px - 70px); */
-  min-height: calc(100vh - 70px);
+  /* min-height: calc(100vh - 70px); */
   display: block;
   /* backdrop-filter: blur(7px); */
   /* background-color: rgba(var(--bg-primary-op), 0.76); */
@@ -364,7 +370,7 @@ main {
     list-style-type: none;
   }
   .second-nav .navlink {
-    margin: 50px;
+    /* margin: 50px; */
     /* display: inline; */
   }
 

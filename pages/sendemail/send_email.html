@@ -61,68 +61,22 @@
       <div class="nav-circle-bg"></div>
     </div>
     <main>
-      <section class="contactinfo">
-        <h1>Contact</h1>
-        <ul class="links">
-          <li>
-            <a href="tel:+43-677-63160411"
-              ><img
-                height="16"
-                src="../img/contact/telephone-fill-svgrepo-com.svg"
-                alt="Phone Icon" />
-              +43 677 63160411</a
-            >
-          </li>
-          <li>
-            <a href="mailto:j.huemer-fistelberger@students.htl-leonding.ac.at">
-              <img
-                height="16"
-                src="../img/contact/mail-filled-svgrepo-com.svg"
-                alt="Mail Icon" />
-              j.huemer-fistelberger@students.htl-leonding.ac.at</a
-            >
-          </li>
-        </ul>
-      </section>
+      <div class="container"></div>
 
-      <section class="email">
-        <h1>Send me an E-Mail</h1>
-        <div class="container">
-          <form>
-            <div class="textsection">
-              <input type="text" id="name" placeholder="Your Name" required />
-              <input
-                type="email"
-                id="email"
-                placeholder="Your E-Mail"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-              <textarea
-                id="message"
-                rows="4"
-                placeholder="Message"
-                required></textarea>
-            </div>
-            <div>
-              <button id="submit" type="submit">Send</button>
-            </div>
-          </form>
-        </div>
-      </section>
-
-      <section class="location">
-        <h1>My location</h1>
-
-        <iframe
-          class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9537.422373343948!2d14.12937158830002!3d47.8715767607968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773dfc1733fdbbb%3A0x8b92afbaaa91c25d!2sEisbach%208%2C%204563%20Eisbach!5e0!3m2!1sde!2sat!4v1672419412656!5m2!1sde!2sat"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </section>
+      <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail() {
+          Email.send({
+            Host: 'smtp.elasticemail.com',
+            Username: 'jakobhuemer2.0@gmail.com',
+            Password: 'jakobfistel2905',
+            To: 'jakobhuemer2.0@gmail.com',
+            From: document.getElementById('email').value,
+            Subject: '---Portfolio---',
+            Body: document.getElementById('message').value,
+          }).then((message) => alert(message));
+        }
+      </script> -->
     </main>
   </body>
 </html>

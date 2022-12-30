@@ -49,32 +49,33 @@
     </nav>
 
     <img class="baumbot-pp-back" src="../../img/baumbot_pp.png" alt="" />
+    <script>
+      var baumbot_pp = document.querySelector('.baumbot-pp-back');
+      baumbot_pp.addEventListener('click', function () {
+        window.location.href = '../projects.html';
+      });
+    </script>
 
     <main>
+      <h1>Baum Bot</h1>
       <div class="description">
-        The Discord bot Baum Bot is a bot developed by Jakob Huemer-Fistelberger
-        to enhance the daily experience on the Discord server Baumserver. The
-        bot has a variety of features, including the ability to clear messages,
-        send images of a power adapter and a glass of orange juice, and create
-        custom voice channels. It also has an AFK system and the ability to
-        create polls. The bot is still in development, but has already proven to
-        be a valuable tool for the Discord community of Baumserver.
+        The Discord bot <b>Baum Bot</b> is a bot developed by Jakob
+        Huemer-Fistelberger to enhance the daily experience on the Discord
+        server Baumserver. The bot has a variety of features, including the
+        ability to clear messages, send images of a power adapter and a glass of
+        orange juice, and create custom voice channels. It also has an AFK
+        system and the ability to create polls. The bot is still in development,
+        but has already proven to be a valuable tool for the Discord community
+        of Baumserver.
       </div>
       <div class="commands">
+        <h2>Commands</h2>
+        <script src="../../script/bb-command-reveal.js"></script>
         <div class="command cclear">
           <h3 class="commandcommand">clear</h3>
           <p class="commanddescript">
             The <b>/clear</b> command allows members to quickly delete a
             specific number of messages in a channel.
-          </p>
-        </div>
-
-        <div class="command cnetzteil-orangensaft">
-          <h3 class="commandcommand">netzteil</h3>
-          <h3 class="commandcommand">orangensaft</h3>
-          <p class="commanddescript">
-            The <b>/netzteil</b> and <b>/orangensaft</b> commands send members
-            fun images of a power adapter and a glass of orange juice.
           </p>
         </div>
 
@@ -117,6 +118,22 @@
           <p class="commanddescript">
             The <b>/weather</b> command provides members with the current
             weather for a given location.
+          </p>
+        </div>
+
+        <div class="command cnetzteil">
+          <h3 class="commandcommand">netzteil</h3>
+          <p class="commanddescript">
+            The <b>/netzteil</b> command sends members a fun image of a power
+            adapter.
+          </p>
+        </div>
+
+        <div class="command corangensaft">
+          <h3 class="commandcommand">orangensaft</h3>
+          <p class="commanddescript">
+            The <b>/orangensaft</b> command sends members a fun image of a glass
+            of orange juice.
           </p>
         </div>
       </div>
