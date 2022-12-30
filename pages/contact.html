@@ -6,13 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/default.css" />
     <link rel="stylesheet" href="../style/contact.css" />
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('ry63wI6Zmvt7B6nDD');
+      })();
+    </script>
+    <script src="../script/mail.js"></script>
+
     <title>Contact</title>
   </head>
   <body>
     <script src="../script/s_word.js"></script>
-    <div id="background">
+    <!-- <div id="background">
       <script src="../../script/index_bg.js"></script>
-    </div>
+    </div> -->
     <nav>
       <div class="nav-content">
         <div class="nav-content-left">
@@ -61,7 +72,7 @@
       <div class="nav-circle-bg"></div>
     </div>
     <main>
-      <section class="contactinfo">
+      <section class="contactinfo top-section">
         <h1>Contact</h1>
         <ul class="links">
           <li>
@@ -88,26 +99,82 @@
       <section class="email">
         <h1>Send me an E-Mail</h1>
         <div class="container">
-          <form>
+          <form onsubmit="sendEmail(); reset(); return false;">
             <div class="textsection">
               <input type="text" id="name" placeholder="Your Name" required />
               <input
                 type="email"
+                name="email"
                 id="email"
                 placeholder="Your E-Mail"
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
               <textarea
                 id="message"
+                name="message"
                 rows="4"
                 placeholder="Message"
                 required></textarea>
             </div>
             <div>
+              <!-- onclick="sendMail()" -->
               <button id="submit" type="submit">Send</button>
             </div>
           </form>
         </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+          // function sendEail() {
+          //   Email.send({
+          //     Host: 'smtp.elasticemail.com',
+          //     Username: 'jakobhuemer2.0@gmail.com',
+          //     Password: 'jakobfistel2905',
+          //     To: 'jakobhuemer2.0@gmail.com',
+          //     From: document.getElementById('email').value,
+          //     Subject:
+          //       'New E-Mail from ' + document.getElementById('name').value,
+          //     Body: 'And this is the body',
+          //   }).then((message) => alert(message));
+          // }
+
+          function sendEmail() {
+            if (
+              document.getElementById('name').value == '' ||
+              document.getElementById('email').value == '' ||
+              document.getElementById('message').value == ''
+            ) {
+              return;
+            }
+
+            var params = {
+              name: document.getElementById('name').value,
+              email: document.getElementById('email').value,
+              message: document.getElementById('message').value,
+            };
+
+            // alert(document.getElementById('email').value);
+            // console.log(params);
+            // alert(params);
+
+            const serviceID = 'service_w9sem2z';
+            const templateID = 'template_ih18w3o';
+            emailjs
+              .send(serviceID, templateID, params)
+              .then((res) => {
+                // document.getElementById('name').value = '';
+                // document.getElementById('email').value = '';
+                // document.getElementById('message').value = '';
+                // alert('Message sent successfully!');
+                console.log(res);
+              })
+              .catch((err) => {
+                console.log(err);
+                // alert('Message failed to send.');
+              });
+
+            return;
+          }
+        </script>
       </section>
 
       <section class="location">
@@ -116,7 +183,6 @@
         <iframe
           class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9537.422373343948!2d14.12937158830002!3d47.8715767607968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773dfc1733fdbbb%3A0x8b92afbaaa91c25d!2sEisbach%208%2C%204563%20Eisbach!5e0!3m2!1sde!2sat!4v1672419412656!5m2!1sde!2sat"
-          width="600"
           height="450"
           style="border: 0"
           allowfullscreen=""
