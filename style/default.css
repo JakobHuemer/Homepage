@@ -1,15 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poor+Story&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-@font-face {
-  font-family: 'monocraft';
-  src: url('../fonts/monocraft/monocraft-webfont.woff') format('woff');
-}
+/* 
+  Fonts: 
+    - Hexaframe CF Extra Bold Oblique
+    - JetBrains Mono
+    - Poor Story
+    - Inter
+  
+  Colors:
+    - Background Primary: #0F0F0F
+    - Background Secondary: #020202
+    - Background Tertiary: #141414
+    - Font Color Primary: #FFFFFF
+    - Font Color Secondary: #FDFDFD
+    - Accent One: #1393E9
+    - Accent Two: #E99B13
+    - Neutral Primary: #FFFFFF
+    - Neutral Secondary: #C0C0C0
 
+*/
 @font-face {
   font-family: 'Hexaframe CF Extra Bold Oblique';
-  src: url('../fonts/hexaframe/HexaframeCF-ExtraBoldOblique/HexaframeCF-ExtraBoldOblique.woff')
-    format('woff');
+  src: url(../fonts/Hexaframe/HexaframeCF-ExtraBoldOblique/HexaframeCF-ExtraBoldOblique.ttf);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(40, 40, 40);
+  border-radius: 20rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(32, 32, 32);
+}
+
+/* Standart rules */
+
+h1,
+h2,
+h3 {
+  font-size: 2rem;
+  font-family: 'Hexaframe CF Extra Bold Oblique';
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+* {
+  font-size: 16px;
+  transition: color 0.2s, background-color 0.2s;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -35,13 +88,6 @@
   box-sizing: border-box;
 }
 
-* {
-  transition: color 0.2s, background-color 0.2s;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 b {
   color: var(--accent-one);
 }
@@ -53,12 +99,12 @@ b {
 
 /* Navbar of all sites */
 body {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-tertiary);
 }
 nav {
   position: relative;
   top: 0;
-  z-index: 100;
+  z-index: 500;
   opacity: 1;
   background-color: var(--bg-primary);
 }
@@ -165,12 +211,13 @@ main {
 }
 
 .second-nav {
+  z-index: 1000;
   display: none;
 }
 
 /* Mode switcher */
 
-.mode-switcher {
+/* .mode-switcher {
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
@@ -186,36 +233,36 @@ main {
 .mode-indicator {
   display: block;
   margin: auto;
-}
+} */
 
 /*Moon on*/
 
-.mode-indicator.indicator-dark.on {
+/* .mode-indicator.indicator-dark.on {
   width: 32px;
   height: 32px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
 /*Sun on*/
 
-.mode-indicator.indicator-light.on {
+/* .mode-indicator.indicator-light.on {
   width: 32px;
   height: 32px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
 /*Sun and moon off*/
 
-.mode-indicator.indicator-light.off {
+/* .mode-indicator.indicator-light.off {
   display: none;
 }
 .mode-indicator.indicator-dark.off {
   display: none;
-}
+} */
 
 /* Media max 810 Pixel */
 
@@ -247,7 +294,7 @@ main {
     cursor: pointer;
     background-color: var(--bg-primary);
     border-radius: 50%;
-    z-index: 9999;
+    z-index: 1000;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -311,7 +358,7 @@ main {
 
   /*Nav big circle closed*/
   .second-nav .nav-circle-bg {
-    z-index: 80;
+    z-index: 900;
     transition: all 0.3s;
     transition-delay: 0.1s;
     right: 10px;
@@ -324,6 +371,7 @@ main {
   }
 
   .second-nav {
+    z-index: 1000;
     display: block;
   }
   /*Nav bg circle open*/
@@ -339,7 +387,6 @@ main {
   /*Let main navbar disappear*/
   .nav-content .navlist {
     transition: all;
-    z-index: 100;
     display: none;
     position: fixed;
   }
@@ -368,10 +415,6 @@ main {
 
   .second-nav .navlist {
     list-style-type: none;
-  }
-  .second-nav .navlink {
-    /* margin: 50px; */
-    /* display: inline; */
   }
 
   /*Menu open*/
