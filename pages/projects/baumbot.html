@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style/default.css" />
     <link rel="stylesheet" href="../../style/baumbot.css" />
+    <script src="../../script/s_word.js"></script>
+
+    <script src="../../script/intro_animation.js" defer></script>
+
+    <script src="../../script/expand.js" defer></script>
+
     <title>Contact</title>
   </head>
   <body>
-    <script src="../../script/s_word.js"></script>
     <nav>
       <div class="nav-content">
         <div class="nav-content-left">
@@ -35,7 +40,11 @@
       </div>
     </nav>
 
-    <img class="baumbot-pp-back" src="../../img/baumbot_pp.png" alt="" />
+    <img
+      class="baumbot-pp-back animate-in"
+      src="../../img/baumbot_pp.png"
+      alt=""
+    />
     <script>
       var baumbot_pp = document.querySelector('.baumbot-pp-back');
       baumbot_pp.addEventListener('click', function () {
@@ -43,9 +52,9 @@
       });
     </script>
 
-    <main>
+    <main class="animate-in">
       <h1>Baum Bot</h1>
-      <div class="description">
+      <div class="description animate-in">
         The Discord bot <b>Baum Bot</b> is a bot developed by Jakob
         Huemer-Fistelberger to enhance the daily experience on the Discord
         server Baumserver. The bot has a variety of features, including the
@@ -55,10 +64,10 @@
         but has already proven to be a valuable tool for the Discord community
         of Baumserver.
       </div>
-      <section class="commands">
+      <section class="commands animate-in">
         <h2>Commands</h2>
-        <script src="../../script/bb-command-reveal.js"></script>
-        <div class="command cclear">
+
+        <div class="command cclear expand">
           <h3 class="commandcommand">clear</h3>
           <p class="commanddescript">
             The <b>/clear</b> command allows members to quickly delete a
@@ -66,7 +75,7 @@
           </p>
         </div>
 
-        <div class="command cvoice">
+        <div class="command cvoice expand">
           <h3 class="commandcommand">voice</h3>
           <p class="commanddescript">
             The <b>/voice</b> command has a variety of subcommands for editing
@@ -75,7 +84,7 @@
           </p>
         </div>
 
-        <div class="command cafk">
+        <div class="command cafk expand">
           <h3 class="commandcommand">afk</h3>
           <p class="commanddescript">
             The <b>/afk</b> command allows members to edit the name of their AFK
@@ -84,7 +93,7 @@
           </p>
         </div>
 
-        <div class="command cpoll">
+        <div class="command cpoll expand">
           <h3 class="commandcommand">poll</h3>
           <p class="commanddescript">
             The <b>/poll</b> command enables members to create polls with custom
@@ -93,14 +102,14 @@
           </p>
         </div>
 
-        <div class="command cping">
+        <div class="command cping expand">
           <h3 class="commandcommand">ping</h3>
           <p class="commanddescript">
             The <b>/ping</b> command tells members the current ping of the bot.
           </p>
         </div>
 
-        <div class="command cweather">
+        <div class="command cweather expand">
           <h3 class="commandcommand">weather</h3>
           <p class="commanddescript">
             The <b>/weather</b> command provides members with the current
@@ -108,7 +117,7 @@
           </p>
         </div>
 
-        <div class="command cnetzteil">
+        <div class="command cnetzteil expand">
           <h3 class="commandcommand">netzteil</h3>
           <p class="commanddescript">
             The <b>/netzteil</b> command sends members a fun image of a power
@@ -116,7 +125,7 @@
           </p>
         </div>
 
-        <div class="command corangensaft">
+        <div class="command corangensaft expand">
           <h3 class="commandcommand">orangensaft</h3>
           <p class="commanddescript">
             The <b>/orangensaft</b> command sends members a fun image of a glass
@@ -126,7 +135,31 @@
       </section>
 
       <section class="info">
-        <h2>Information</h2>
+        <h2>Some extra information</h2>
+        <ul class="extra-info">
+          <li>
+            <a target="_blank" href="https://github.com/JakobHuemer/BaumBot"
+              ><img height="16" src="../../img/svg/GitHubLogo.svg" alt="" />
+              Github
+              <img
+                height="16"
+                src="../../img/svg/open-external-link-icon.svg"
+                alt=""
+            /></a>
+          </li>
+
+          <li>
+            <span>v1.3.10</span>
+          </li>
+
+          <li class="expand">
+            <span>
+              <img height="16" src="../../img/svg/discord.svg" alt="de" />
+              Baumserver</span
+            >
+            <p>The discord server I develop Baum Bot on</p>
+          </li>
+        </ul>
       </section>
     </main>
   </body>

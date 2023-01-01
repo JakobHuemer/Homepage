@@ -6,57 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="../style/default.css" />
     <link rel="stylesheet" href="../style/contact.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
       (function () {
         emailjs.init('ry63wI6Zmvt7B6nDD');
       })();
     </script>
     <script src="../script/notify.js" defer></script>
+    <script src="../script/s_word.js"></script>
+
+    <script src="../script/intro_animation.js" defer></script>
 
     <title>Contact</title>
   </head>
   <body>
-    <!-- <div class="tempbuttons">
-      <button onclick="createToast('success')">Success</button>
-      <button onclick="createToast('user-error')">User Error</button>
-      <button onclick="createToast('fatal-error')">Fatal Error</button>
-    </div> -->
-    <!-- -- -->
-
     <ul class="notifications"></ul>
-    <!-- <li class="toast success">
-      <div class="column">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Email sucessfully sent!</span>
-      </div>
-      <i class="fa-solid fa-xmark"></i>
-    </li>
-    <li class="toast fatal-error">
-      <div class="column">
-        <i class="fa-solid fa-circle-xmark"></i>
-        <span>Ops, something went wrong!</span>
-      </div>
-      <i class="fa-solid fa-xmark"></i>
-    </li>
-    <li class="toast user-error">
-      <div class="column">
-        <i class="fa-solid fa-circle-exclamation"></i>
-        <span>E-Mail not valid!</span>
-      </div>
-      <i class="fa-solid fa-xmark"></i>
-    </li> -->
 
-    <script src="../script/s_word.js"></script>
-    <div id="background">
-      <script src="../../script/index_bg.js"></script>
-    </div>
     <nav>
       <div class="nav-content">
         <div class="nav-content-left">
@@ -96,7 +68,7 @@
     </div>
 
     <main>
-      <section class="contactinfo top-section">
+      <section class="contactinfo top-section animate-in">
         <h1>Contact</h1>
         <ul class="links">
           <li>
@@ -104,7 +76,8 @@
               ><img
                 height="16"
                 src="../img/contact/telephone-fill-svgrepo-com.svg"
-                alt="Phone Icon" />
+                alt="Phone Icon"
+              />
               +43 677 63160411</a
             >
           </li>
@@ -113,7 +86,8 @@
               <img
                 height="16"
                 src="../img/contact/mail-filled-svgrepo-com.svg"
-                alt="Mail Icon" />
+                alt="Mail Icon"
+              />
               j.huemer-fistelberger@students.htl-leonding.ac.at</a
             >
           </li>
@@ -122,17 +96,20 @@
               ><img
                 height="16"
                 src="../img/contact/mail-filled-svgrepo-com.svg"
-                alt="Mail Icon" />
+                alt="Mail Icon"
+              />
               jakobhuemer2.0@gmail.com</a
             >
           </li>
         </ul>
       </section>
 
-      <section class="email">
+      <section class="email animate-in">
         <h1>Send me an E-Mail</h1>
         <div class="container">
-          <form onsubmit="sendEmail(); reset(); return false;">
+          <form
+            onsubmit="if (sendEmail() == true) {console.log('yes'); reset();} return false;"
+          >
             <div class="textsection">
               <input type="text" id="name" placeholder="Your Name" required />
               <input
@@ -140,13 +117,15 @@
                 name="email"
                 id="email"
                 placeholder="Your E-Mail"
-                required />
+                required
+              />
               <textarea
                 id="message"
                 name="message"
                 rows="4"
                 placeholder="Message"
-                required></textarea>
+                required
+              ></textarea>
             </div>
             <div>
               <!-- onclick="sendMail()" -->
@@ -157,22 +136,20 @@
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script>
           function sendEmail() {
-            console.log('sendEmail');
-
             if (
               document.getElementById('name').value == '' ||
               document.getElementById('email').value == '' ||
               document.getElementById('message').value == ''
             ) {
-              return;
+              createToast('user-error', 'Please fill in all fields!');
+              return false;
             }
             pattern =
               /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
             if (!pattern.test(document.getElementById('email').value)) {
-              console.log('Email not valid');
-              createToast('user-error');
-              return;
+              createToast('user-error', 'E-Mail not valid!');
+              return false;
             }
 
             var params = {
@@ -186,12 +163,15 @@
             emailjs
               .send(serviceID, templateID, params)
               .then((res) => {
-                createToast('success');
                 // Success; show an alert to the user
+                createToast('success', 'Email sucessfully sent!');
+                console.log('Return true');
+                return true;
               })
               .catch((err) => {
-                createToast('fatal-error');
                 // Error; show an alert to the user
+                createToast('fatal-error', 'Ops, something went wrong!');
+                return false;
               });
 
             return;
@@ -199,7 +179,7 @@
         </script>
       </section>
 
-      <section class="location">
+      <section class="location animate-in">
         <h1>My location</h1>
 
         <iframe
@@ -209,7 +189,8 @@
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </main>
   </body>

@@ -25,6 +25,53 @@
   src: url(../fonts/Hexaframe/HexaframeCF-ExtraBoldOblique/HexaframeCF-ExtraBoldOblique.ttf);
 }
 
+/* Keyframes */
+
+/* @keyframes plop {
+  0% {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} */
+
+@keyframes plop {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* animate in*/
+
+.animate-in {
+  visibility: hidden;
+}
+
+.animate-in.visible {
+  visibility: visible;
+  animation: plop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {

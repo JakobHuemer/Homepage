@@ -1,15 +1,3 @@
-#background {
-  background: var(--bg-tertiary);
-  background-position: top center;
-  position: fixed;
-  background-repeat: no-repeat;
-  z-index: -10;
-  width: 100%;
-  height: 120%;
-  background-size: cover;
-  /* transform: translate3d(0, 34px, 34px); */
-}
-
 main {
   margin-top: 2rem;
   -webkit-box-shadow: 0px 0px 40px -3px rgba(0, 0, 0, 0.7);
@@ -67,7 +55,7 @@ main .description {
   box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 0.7);
 }
 
-.commands {
+section {
   flex: 1 1 50%;
   background-color: rgba(var(--bg-primary-op), 0.4);
   border-radius: 1.3rem;
@@ -103,6 +91,10 @@ h2 {
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.3);
 }
 
+.command:hover {
+  background-color: rgba(var(--font-clr-primary-op), 0.1);
+}
+
 .commandcommand {
   font-family: 'JetBrains Mono';
   font-size: 1rem;
@@ -117,7 +109,7 @@ h2 {
   content: '/';
 }
 
-.command--reveal .commanddescript {
+.expand--reveal .commanddescript {
   visibility: visible;
   position: relative;
 
@@ -126,4 +118,68 @@ h2 {
   background-color: rgba(255, 255, 255, 0.04);
   padding: 1.4%;
   border-radius: 1rem;
+}
+
+/* Extra informationm */
+
+.info img {
+  filter: invert();
+}
+
+.info ul {
+  font-family: 'JetBrains Mono';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info .links {
+  font-family: 'JetBrains Mono';
+}
+
+.info h2 {
+  width: 100%;
+  display: block;
+  margin: 0.5rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.info li {
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.2s;
+  margin: 0.3rem;
+  background-color: rgba(var(--bg-secondary-op), 0.5);
+  padding: 1rem;
+  border-radius: 1.3rem;
+}
+
+.info a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.info ul {
+  list-style-type: none;
+}
+
+.info li:hover {
+  background-color: rgba(var(--font-clr-primary-op), 0.1);
+}
+
+.info li p {
+  margin: 0.6rem 0;
+  font-family: 'JetBrains Mono';
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 2%;
+  border-radius: 0.9rem;
+  visibility: hidden;
+  position: absolute;
+}
+
+.info li.expand--reveal p {
+  position: relative;
+  visibility: visible;
 }
