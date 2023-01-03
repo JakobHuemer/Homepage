@@ -4,7 +4,7 @@ console.log(sections);
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: '-200px',
+  rootMargin: '-20%',
 };
 
 console.log(options);
