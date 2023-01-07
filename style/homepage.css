@@ -27,6 +27,7 @@ section {
 }
 
 .homepage-pp-back {
+  max-width: 70%;
   z-index: 1;
   cursor: pointer;
   overflow: hidden;
@@ -97,6 +98,7 @@ main .description {
 }
 
 .featurelist li {
+  text-align: center;
   font-family: 'JetBrains mono';
   transition: background-color 0.2s;
 
@@ -147,6 +149,7 @@ main .description {
 .info a,
 .info span {
   /* cursor: pointer; */
+  text-align: center;
   display: inline-block;
   transition: background-color 0.2s;
   margin: 0.3rem;
@@ -183,6 +186,7 @@ main .description {
 
 .font-jetbrains-mono {
   font-family: 'JetBrains mono';
+  font-weight: 400;
 }
 
 .font-inter {

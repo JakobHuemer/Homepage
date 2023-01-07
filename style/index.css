@@ -7,6 +7,9 @@
 }
 
 .profile img {
+  -webkit-box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
   margin: 10px;
   width: 20rem;
   overflow: hidden;
@@ -14,6 +17,9 @@
 }
 
 .profile p {
+  -webkit-box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 23px -3px rgba(0, 0, 0, 1);
   color: var(--font-clr-primary);
   margin: 10px;
   max-width: 100%;

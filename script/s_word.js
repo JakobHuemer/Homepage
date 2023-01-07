@@ -7,6 +7,7 @@ words = {
   rickroll: 'https://youtu.be/dQw4w9WgXcQ',
   secrete:
     'https://htblaleonding-my.sharepoint.com/:w:/g/personal/j_huemer-fistelberger_htblaleonding_onmicrosoft_com/EX1SAKy31WNNoV3jugn6lM0BN13jVqEyam9XKqzeHRTXhw?e=auCmUO',
+  jokes: '/pages/secrete/jokes.html',
 };
 
 addEventListener('keydown', async (event) => {
@@ -22,7 +23,7 @@ addEventListener('keydown', async (event) => {
   // }
 
   if (testString.toLowerCase() in words) {
-    window.location.href = words[testString.toLowerCase()];
+    window.open(words[testString.toLowerCase()], '_blank');
   }
 
   setTimeout(() => {
