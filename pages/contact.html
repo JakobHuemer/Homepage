@@ -1,207 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" href="../style/default.css" />
+		<link rel="stylesheet" href="../style/default.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 
-    <link rel="stylesheet" href="../style/contact.css" />
-    <link rel="stylesheet" href="../style/toast.css" />
+		<link rel="stylesheet" href="../style/contact.css" />
+		<link rel="stylesheet" href="../style/toast.css" />
 
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init('ry63wI6Zmvt7B6nDD');
-      })();
-    </script>
-    <script src="../script/notify.js" defer></script>
-    <script src="../script/s_word.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function () {
+				emailjs.init('ry63wI6Zmvt7B6nDD');
+			})();
+		</script>
+		<script src="../script/notify.js" defer></script>
+		<script src="../script/s_word.js"></script>
 
-    <script src="../script/intro_animation.js" defer></script>
+		<script src="../script/intro_animation.js" defer></script>
 
-    <title>Contact</title>
-  </head>
-  <body>
-    <ul class="notifications"></ul>
+		<title>Contact</title>
+	</head>
+	<body>
+		<ul class="notifications"></ul>
 
-    <nav>
-      <div class="nav-content">
-        <div class="nav-content-left">
-          <h1>Contact</h1>
-        </div>
-        <ul class="navlist">
-          <li><a class="navlink" href="../index.html">Home</a></li>
-          <li>
-            <a class="navlink" href="../pages/experiences.html">Experiences</a>
-          </li>
-          <li><a class="navlink" href="../pages/hobbies.html">Hobbies</a></li>
-          <li><a class="navlink" href="../pages/projects.html">Projects</a></li>
-          <li>
-            <a class="navlink" href="../pages/contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+		<nav>
+			<div class="nav-content">
+				<div class="nav-content-left">
+					<h1>Contact</h1>
+				</div>
+				<ul class="navlist">
+					<li><a class="navlink" href="../index.html">Home</a></li>
+					<li>
+						<a class="navlink" href="../pages/experiences.html">Experiences</a>
+					</li>
+					<li><a class="navlink" href="../pages/hobbies.html">Hobbies</a></li>
+					<li><a class="navlink" href="../pages/projects.html">Projects</a></li>
+					<li>
+						<a class="navlink" href="../pages/contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-    <div class="second-nav">
-      <div class="menu-btn">
-        <div class="menu-btn__burger"></div>
-      </div>
-      <script src="../script/nav.js"></script>
-      <ul class="navlist">
-        <li><a class="navlink" href="../index.html">Home</a></li>
-        <li>
-          <a class="navlink" href="../pages/experiences.html">Experiences</a>
-        </li>
-        <li><a class="navlink" href="../pages/hobbies.html">Hobbies</a></li>
-        <li><a class="navlink" href="../pages/projects.html">Projects</a></li>
-        <li>
-          <a class="navlink" href="../pages/contact.html">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-circle-bg"></div>
-    </div>
+		<div class="second-nav">
+			<div class="menu-btn">
+				<div class="menu-btn__burger"></div>
+			</div>
+			<script src="../script/nav.js"></script>
+			<ul class="navlist">
+				<li><a class="navlink" href="../index.html">Home</a></li>
+				<li>
+					<a class="navlink" href="../pages/experiences.html">Experiences</a>
+				</li>
+				<li><a class="navlink" href="../pages/hobbies.html">Hobbies</a></li>
+				<li><a class="navlink" href="../pages/projects.html">Projects</a></li>
+				<li>
+					<a class="navlink" href="../pages/contact.html">Contact</a>
+				</li>
+			</ul>
+			<div class="nav-circle-bg"></div>
+		</div>
 
-    <main>
-      <section class="contactinfo top-section animate-in">
-        <h1>Contact</h1>
-        <ul class="links">
-          <li>
-            <a href="tel:+43-677-63160411"
-              ><img
-                height="16"
-                src="../img/contact/telephone-fill-svgrepo-com.svg"
-                alt="Phone Icon"
-              />
-              +43 677 63160411</a
-            >
-          </li>
-          <li>
-            <a href="mailto:j.huemer-fistelberger@students.htl-leonding.ac.at">
-              <img
-                height="16"
-                src="../img/contact/mail-filled-svgrepo-com.svg"
-                alt="Mail Icon"
-              />
-              j.huemer-fistelberger@students.htl-leonding.ac.at</a
-            >
-          </li>
-          <li>
-            <a href="mailto:jakobhuemer2.0@gmail.com"
-              ><img
-                height="16"
-                src="../img/contact/mail-filled-svgrepo-com.svg"
-                alt="Mail Icon"
-              />
-              jakobhuemer2.0@gmail.com</a
-            >
-          </li>
-        </ul>
-      </section>
+		<main>
+			<section class="contactinfo top-section animate-in">
+				<h1>Contact</h1>
+				<ul class="links">
+					<li>
+						<a href="tel:+43-677-63160411">
+							<img height="16" src="../img/contact/telephone-fill-svgrepo-com.svg" alt="Phone Icon" />
+							+43 677 63160411
+						</a>
+					</li>
+					<li>
+						<a href="mailto:j.huemer-fistelberger@students.htl-leonding.ac.at">
+							<img height="16" src="../img/contact/mail-filled-svgrepo-com.svg" alt="Mail Icon" />
+							j.huemer-fistelberger@students.htl-leonding.ac.at
+						</a>
+					</li>
+					<li>
+						<a href="mailto:jakobhuemer2.0@gmail.com">
+							<img height="16" src="../img/contact/mail-filled-svgrepo-com.svg" alt="Mail Icon" />
+							jakobhuemer2.0@gmail.com
+						</a>
+					</li>
+				</ul>
+			</section>
 
-      <section class="email animate-in">
-        <h1>Send me an E-Mail</h1>
-        <div class="container">
-          <form onsubmit="sendEmail(); reset(); return false;">
-            <div class="textsection">
-              <input type="text" id="name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="email"
-                id="email"
-                pattern="/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i"
-                placeholder="Your E-Mail"
-                required
-              />
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Message"
-                required
-              ></textarea>
-            </div>
-            <div>
-              <!-- onclick="sendMail()" -->
-              <button id="submit" type="submit">Send</button>
-            </div>
-          </form>
-        </div>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-          async function sendEmail() {
-            if (
-              document.getElementById('name').value == '' ||
-              document.getElementById('email').value == '' ||
-              document.getElementById('message').value == ''
-            ) {
-              createToast('user-error', 'Please fill in all fields!');
-              return false;
-            }
-            pattern =
-              /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+			<section class="email animate-in">
+				<h1>Send me an E-Mail</h1>
+				<div class="container">
+					<form onsubmit="sendEmail(); reset(); return false;">
+						<div class="textsection">
+							<input type="text" id="name" placeholder="Your Name" required />
+							<input
+								type="email"
+								name="email"
+								id="email"
+								pattern="/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i"
+								placeholder="Your E-Mail"
+								required />
+							<textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+						</div>
+						<div>
+							<!-- onclick="sendMail()" -->
+							<button id="submit" type="submit">Send</button>
+						</div>
+					</form>
+				</div>
+				<script src="https://smtpjs.com/v3/smtp.js"></script>
+				<script>
+					async function sendEmail() {
+						if (
+							document.getElementById('name').value == '' ||
+							document.getElementById('email').value == '' ||
+							document.getElementById('message').value == ''
+						) {
+							createToast('user-error', 'Please fill in all fields!');
+							return false;
+						}
+						pattern =
+							/^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
-            if (!pattern.test(document.getElementById('email').value)) {
-              createToast('user-error', 'E-Mail not valid');
-              return false;
-            }
+						if (!pattern.test(document.getElementById('email').value)) {
+							createToast('user-error', 'E-Mail not valid');
+							return false;
+						}
 
-            // EMAIL VALIDAGTOR -
+						// EMAIL VALIDAGTOR -
 
-            // COMMING SOON
+						// COMMING SOON
 
-            var params = {
-              name: document.getElementById('name').value,
-              email: document.getElementById('email').value,
-              message: document.getElementById('message').value,
-            };
+						var params = {
+							name: document.getElementById('name').value,
+							email: document.getElementById('email').value,
+							message: document.getElementById('message').value,
+						};
 
-            const serviceID = 'service_w9sem2z';
-            const templateID = 'template_ih18w3o';
-            const send_email = await emailjs
-              .send(serviceID, templateID, params)
-              .then((res) => {
-                // Success; show an alert to the user
-                createToast('success', 'Email sucessfully sent!');
-                console.log('Return true');
-                return true;
-              })
-              .catch((err) => {
-                // Error; show an alert to the user
-                createToast('fatal-error', 'Ops, something went wrong!');
-                return false;
-              });
+						const serviceID = 'service_w9sem2z';
+						const templateID = 'template_ih18w3o';
+						const send_email = await emailjs
+							.send(serviceID, templateID, params)
+							.then((res) => {
+								// Success; show an alert to the user
+								createToast('success', 'Email sucessfully sent!');
+								console.log('Return true');
+								return true;
+							})
+							.catch((err) => {
+								// Error; show an alert to the user
+								createToast('fatal-error', 'Ops, something went wrong!');
+								return false;
+							});
 
-            return true;
-          }
-        </script>
-      </section>
+						return true;
+					}
+				</script>
+			</section>
 
-      <section class="location animate-in">
-        <h1>My location</h1>
+			<section class="location animate-in">
+				<h1>My location</h1>
 
-        <iframe
-          class="map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9537.422373343948!2d14.12937158830002!3d47.8715767607968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773dfc1733fdbbb%3A0x8b92afbaaa91c25d!2sEisbach%208%2C%204563%20Eisbach!5e0!3m2!1sde!2sat!4v1672419412656!5m2!1sde!2sat"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section>
-    </main>
-  </body>
+				<iframe
+					class="map"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9537.422373343948!2d14.12937158830002!3d47.8715767607968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4773dfc1733fdbbb%3A0x8b92afbaaa91c25d!2sEisbach%208%2C%204563%20Eisbach!5e0!3m2!1sde!2sat!4v1672419412656!5m2!1sde!2sat"
+					height="450"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</section>
+		</main>
+	</body>
 </html>
