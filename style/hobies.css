@@ -87,7 +87,7 @@ section {
   font-size: 2rem;
   margin: 0 0 4% 0;
   padding: 0;
-  font-family: 'Hexaframe CF Extra Bold Oblique';
+  /* font-family: 'Hexaframe CF Extra Bold Oblique'; */
   color: var(--accent-one);
 }
 

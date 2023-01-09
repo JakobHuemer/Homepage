@@ -51,7 +51,8 @@ section {
 }
 
 main h1 {
-  font-family: 'Hexaframe CF Extra Bold Oblique';
+  /* font-family: 'Voice Activated BB'; */
+  font-style: italic;
   color: var(--accent-one);
   text-align: center;
   margin-bottom: 1.3rem;
@@ -86,7 +87,7 @@ main .description {
 
 .features h2 {
   margin-bottom: 1rem;
-  font-family: 'Hexaframe CF Extra Bold Oblique';
+  /* font-family: 'Hexaframe CF Extra Bold Oblique'; */
   color: var(--accent-one);
   text-align: center;
 }
@@ -201,7 +202,7 @@ main .description {
 }
 
 .font-hexaframe {
-  font-family: 'Hexaframe CF Extra Bold Oblique';
+  /* font-family: 'Hexaframe CF Extra Bold Oblique'; */
   font-size: 18px;
 }
 

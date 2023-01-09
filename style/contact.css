@@ -35,7 +35,7 @@ section {
 }
 
 h1 {
-  font-family: 'Hexaframe CF Extra Bold Oblique';
+  /* font-family: 'Hexaframe CF Extra Bold Oblique'; */
   color: var(--accent-one);
 }
 
@@ -168,8 +168,11 @@ form .textsection > *:not(:placeholder-shown) {
 }
 
 #submit {
-  font-family: 'Hexaframe CF Extra Bold Oblique';
-  font-size: 20px;
+  /* font-family: 'Hexaframe CF Extra Bold Oblique'; */
+  font-family: 'Voice Activated BB';
+  font-weight: 900;
+  font-style: italic;
+  font-size: 2rem;
   width: 600px;
   max-width: 95%;
   /* padding: 10px 25px 10px 25px; */
